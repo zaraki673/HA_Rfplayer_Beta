@@ -71,8 +71,8 @@ class ProtocolBase(asyncio.Protocol):
             if valid_packet(line):
                 self.handle_raw_packet(line)
             else:
-                log.warning("dropping invalid data: %s", line)
-
+                log.warning("suppression des données invalides!", line)
+#                log.warning("dropping invalid data: %s", line)
     def handle_raw_packet(self, raw_packet: str) -> None:
         """Handle one raw incoming packet."""
         raise NotImplementedError()
@@ -130,7 +130,7 @@ class PacketHandling(ProtocolBase):
                 else:
                     self.handle_packet(packet)
         else:
-            log.warning("no valid packet")
+            log.warning("Packet invalide ")
 
     def handle_packet(self, packet: PacketType) -> None:
         """Process incoming packet dict and optionally call callback."""
@@ -158,12 +158,20 @@ class PacketHandling(ProtocolBase):
     ) -> None:
         """Send device command to rfplayer gateway."""
         if device_id is not None:
-            self.send_raw_packet(f"ZIA++{command} {protocol} ID {device_id}")
+# modif envoie cde Protocol ID si edisioframe ( commande enregistré dans ID)
+            if protocol == "EDISIOFRAME" :
+                self.send_raw_packet(f"ZIA++{protocol} {device_id}")
+            else :
+                self.send_raw_packet(f"ZIA++{command} {protocol} ID {device_id}")
+
         elif device_address is not None:
             self.send_raw_packet(f"ZIA++{command} {protocol} {device_address}")
+# modif pour raw sur edisioframe dans command Edisioframe + hexa
+        elif protocol == "EDISIOFRAME":
+            self.send_raw_packet(f"ZIA++{command}")
+#####
         else:
             self.send_raw_packet(f"ZIA++{protocol} {command}")
-
 
 class CommandSerialization(PacketHandling):
     """Logic for ensuring asynchronous commands are sent in order."""

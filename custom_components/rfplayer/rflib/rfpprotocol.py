@@ -71,8 +71,7 @@ class ProtocolBase(asyncio.Protocol):
             if valid_packet(line):
                 self.handle_raw_packet(line)
             else:
-                log.warning("suppression des données invalides!", line)
-#                log.warning("dropping invalid data: %s", line)
+                log.warning("dropping invalid data: %s", line)
     def handle_raw_packet(self, raw_packet: str) -> None:
         """Handle one raw incoming packet."""
         raise NotImplementedError()
@@ -317,3 +316,4 @@ def create_rfplayer_connection(
     conn = create_serial_connection(loop, protocol_factory, port, baud)
 
     return conn
+        if device_id is not None:

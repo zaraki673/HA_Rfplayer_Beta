@@ -316,4 +316,3 @@ def create_rfplayer_connection(
     conn = create_serial_connection(loop, protocol_factory, port, baud)
 
     return conn
-        if device_id is not None:

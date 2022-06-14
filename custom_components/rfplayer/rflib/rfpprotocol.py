@@ -129,7 +129,7 @@ class PacketHandling(ProtocolBase):
                 else:
                     self.handle_packet(packet)
         else:
-            log.warning("Packet invalide ")
+            log.warning("no valid packet")
 
     def handle_packet(self, packet: PacketType) -> None:
         """Process incoming packet dict and optionally call callback."""

@@ -23,9 +23,11 @@ Intégration
 Puis [Ajouter]()
 
 Si ok, repasser sur intégration , le nouveau dépôt devrait être présent !
-![image](https://user-images.githubusercontent.com/97252459/188435950-d9fb45a9-3370-43c5-9a19-13ef8f51b0f3.png)
+
+![image](https://user-images.githubusercontent.com/97252459/188453031-852a7f38-d30e-4d92-a6ee-c481b96b5ecf.png)
+
 Cliquer sur cette intégration
-![image](https://user-images.githubusercontent.com/97252459/188436224-ab860744-a7fa-4a4a-8468-91de45c76ab9.png)
+![image](https://user-images.githubusercontent.com/97252459/188454437-978de582-358f-429e-9c47-bb82931d3ae0.png)
 Puis sur [Téléchargé]()
 
 ![image](https://user-images.githubusercontent.com/97252459/188436474-e8deb12e-3760-4bf1-8c23-63ddcb65fcb4.png)

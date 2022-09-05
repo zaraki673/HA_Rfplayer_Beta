@@ -18,7 +18,7 @@ https://github.com/Doubledom45/HA-Rfplayer-Beta
 
 Intégration
 
-![image](https://user-images.githubusercontent.com/97252459/188435563-2153b448-7938-4092-a3b6-7ab35179827d.png)
+![image](https://user-images.githubusercontent.com/97252459/188452103-0324079f-eb49-4c52-bbda-b3310e009611.png)
 
 Puis [Ajouter]()
 

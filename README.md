@@ -59,6 +59,12 @@ Sélectionnez le périphérique USB dans la liste et validez.
 
 ![image](https://user-images.githubusercontent.com/97252459/188461028-b7149bfb-e439-4e34-a0b9-e5964a0d8f79.png)
 
+Repasser dans Intégration
+
+![image](https://user-images.githubusercontent.com/97252459/188461765-4115be83-6354-404e-8bb7-dc06028c67d9.png)
+
+
+
 
 
 ## Usage

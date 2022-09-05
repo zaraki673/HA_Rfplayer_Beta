@@ -40,10 +40,23 @@ Il faut redémarrer HA !
 
 ![image](https://user-images.githubusercontent.com/97252459/188436881-a33c2a2c-b461-4c27-8219-9cbcc506c980.png)
 
+Aprés redémarrage
 
+Passer sur Paramètres
 
+Appareils et services
+
+Cliquer sur
+![image](https://user-images.githubusercontent.com/97252459/188457665-35314cf4-fb1a-4e07-ae04-70a864da2a6c.png)
+
+Rechercher intégration [rfplayer]()
+
+![image](https://user-images.githubusercontent.com/97252459/188458256-7a6cd0a1-25c0-489e-88a2-79d4824efac0.png)
 
 Sélectionnez le périphérique USB dans la liste et validez.
+
+![image](https://user-images.githubusercontent.com/97252459/188458404-cbe00813-e6b5-4903-bc55-b4ede158fe4a.png)
+
 
 ## Usage
 

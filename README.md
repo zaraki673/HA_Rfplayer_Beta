@@ -27,7 +27,7 @@ Si ok, repasser sur intégration , le nouveau dépôt devrait être présent !
 ![image](https://user-images.githubusercontent.com/97252459/188453031-852a7f38-d30e-4d92-a6ee-c481b96b5ecf.png)
 
 Cliquer sur cette intégration
-![image](https://user-images.githubusercontent.com/97252459/188454437-978de582-358f-429e-9c47-bb82931d3ae0.png)
+
 Puis sur [Téléchargé]()
 
 ![image](https://user-images.githubusercontent.com/97252459/188436474-e8deb12e-3760-4bf1-8c23-63ddcb65fcb4.png)

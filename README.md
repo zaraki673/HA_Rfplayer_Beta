@@ -57,6 +57,9 @@ Sélectionnez le périphérique USB dans la liste et validez.
 
 ![image](https://user-images.githubusercontent.com/97252459/188458404-cbe00813-e6b5-4903-bc55-b4ede158fe4a.png)
 
+![image](https://user-images.githubusercontent.com/97252459/188461028-b7149bfb-e439-4e34-a0b9-e5964a0d8f79.png)
+
+
 
 ## Usage
 

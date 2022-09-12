@@ -1,4 +1,4 @@
-# HA_RFPlayer
+# HA_RFPlayer Béta
 
 Composant/intégration personnalisé RFPlayer pour Home assistant
 

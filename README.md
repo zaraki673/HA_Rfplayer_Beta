@@ -12,7 +12,7 @@ Il est possible de faire l'intégration par HACS, avec un ajout de dêpot person
 
 [Dépôt]()
 
-https://github.com/Doubledom45/HA-Rfplayer-Beta
+https://github.com/Doubledom45/HA_Rfplayer_Beta
 
 [Catégorie]()
 

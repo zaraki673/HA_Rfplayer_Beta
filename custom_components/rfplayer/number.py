@@ -22,10 +22,10 @@ class RfplayerJammingNumber(RfplayerDevice, NumberEntity):
 
     def __init__(self):
         """Init the number rfplayer entity."""
-        self._attr_min_value = 0
-        self._attr_max_value = 10
-        self._attr_mode = "slider"
-        self._attr_entity_category = EntityCategory.CONFIG
+        self._attr_native_min_value = 0
+        self._attr_native_max_value = 10
+        self._attr_native_mode = "slider"
+        self._attr_native_entity_category = EntityCategory.CONFIG
         super().__init__("JAMMING", device_id=0, name="Jamming detection level")
 
     async def async_added_to_hass(self):

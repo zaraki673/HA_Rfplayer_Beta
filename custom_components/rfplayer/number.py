@@ -41,11 +41,11 @@ class RfplayerJammingNumber(RfplayerDevice, NumberEntity):
         self._state = int(event["value"])
 
     @property
-    def value(self):
+    def native_value(self):
         """Return the current setting."""
         return self._state
 
-    async def async_set_value(self, value) -> None:
+    async def async_set_native_value(self, value) -> None:
         """Update the current value."""
         rfplayer = self.hass.data[DOMAIN][RFPLAYER_PROTOCOL]
         await rfplayer.send_command_ack(command=int(value), protocol=self._protocol)

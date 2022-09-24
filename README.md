@@ -6,7 +6,7 @@ Composant/intégration personnalisé RFPlayer pour Home assistant
 
 Copiez le dossier `custom_component/rfplayer` dans votre répertoire de configuration..
 
-Accédez à l'interface utilisateur Home-Assistant, Intégrations de configuration, bouton (+ Ajouter une intégration) et recherchez RFPlayer
+Accédez à l'interface utilisateur Home-Assistant, Intégrations de configuration, bouton (+ Ajouter une intégration) et recherchez rfplayer
 
 Il est possible de faire l'intégration par HACS, avec un ajout de dêpot personnalisé 
 

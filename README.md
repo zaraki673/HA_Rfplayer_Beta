@@ -6,7 +6,7 @@ Composant/intégration personnalisé RFPlayer pour Home assistant
 
 Copiez le dossier `custom_component/rfplayer` dans votre répertoire de configuration..
 
-Accédez à l'interface utilisateur Home-Assistant, Intégrations de configuration, bouton (+ Ajouter une intégration) et recherchez rfplayer
+## Puis passer au .1 (ci-dessous)
 
 Il est possible de faire l'intégration par HACS, avec un ajout de dêpot personnalisé 
 
@@ -18,7 +18,7 @@ https://github.com/Doubledom45/HA_Rfplayer_Beta
 
 Intégration
 
-![image](https://user-images.githubusercontent.com/97252459/188452103-0324079f-eb49-4c52-bbda-b3310e009611.png)
+![image](https://user-images.githubusercontent.com/97252459/192100220-4903c9ad-1ba3-4da1-94fa-8744424c4906.png)
 
 Puis [Ajouter]()
 
@@ -39,6 +39,8 @@ Il faut redémarrer HA !
 ![image](https://user-images.githubusercontent.com/97252459/188436987-437042ac-1a0b-49ad-961e-29ffee15c601.png)
 
 ![image](https://user-images.githubusercontent.com/97252459/188436881-a33c2a2c-b461-4c27-8219-9cbcc506c980.png)
+    
+#          .1
 
 Aprés redémarrage
 
@@ -72,6 +74,20 @@ Repasser dans Intégration
 Les capteurs sont créés automatiquement si vous l'activez lors de l'installation ou sur le bouton d'option (menu Intégration)
 
 Vous pouvez utiliser le service `rfplayer.send_command` pour envoyer des commandes à vos appareils et ajouter l'appareil en tant que nouvelle entité de commutateur.
+
+Pour les logs ajouter dans le configuration.yaml, partie logger 
+
+        custom_components.rfplayer: debug
+( si "logger" n'existe pas il faut créer )
+
+Exemple:
+
+    logger:
+      default: info
+      logs:
+        custom_components.rfplayer: debug
+        homeassistant.components.rfxtrx: debug
+    
 
 ## Credits
 Version Béta, pour remonter entité correctement !

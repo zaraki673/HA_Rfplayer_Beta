@@ -8,5 +8,5 @@
   "codeowners": ["@Doubledom45", "@Aohzan", "@gce-electronics"],
   "dependencies": [],
   "iot_class": "assumed_state",
-  "version": "15.0.0"
+  "version": "16.0.0"
 }

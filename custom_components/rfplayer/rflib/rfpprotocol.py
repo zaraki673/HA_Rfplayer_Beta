@@ -161,6 +161,16 @@ class PacketHandling(ProtocolBase):
 # modif envoie cde Protocol ID si edisioframe ( commande enregistré dans ID)
             if protocol == "EDISIOFRAME" :
                 self.send_raw_packet(f"ZIA++{protocol} {device_id}")
+# modif envoie cde Protocol sans ID si jamming ( commande )
+            elif protocol == "JAMMING" :
+                if command == "ON" :
+                    self.send_raw_packet(f"ZIA++{protocol} 5")
+                elif command == "OFF" :
+                    self.send_raw_packet(f"ZIA++{protocol} 0")
+                elif device_id == "0" :
+                    self.send_raw_packet(f"ZIA++{protocol} {command}")
+                else:
+                    self.send_raw_packet(f"ZIA++{protocol} {command}")
             else :
 # modif d'ordre d'envoie
                 self.send_raw_packet(f"ZIA++{command} ID {device_id} {protocol}")
@@ -173,8 +183,12 @@ class PacketHandling(ProtocolBase):
             self.send_raw_packet(f"ZIA++{command}")
 #####
         else:
+#bug jamming id=0
+            if protocol == "JAMMING" :
+                self.send_raw_packet(f"ZIA++{protocol} {command}")
 # modif d'ordre d'envoie
-            self.send_raw_packet(f"ZIA++{command} {protocol}")
+            else :
+                self.send_raw_packet(f"ZIA++{command} {protocol}")
 
 class CommandSerialization(PacketHandling):
     """Logic for ensuring asynchronous commands are sent in order."""
@@ -211,6 +225,7 @@ class CommandSerialization(PacketHandling):
         """Send command, wait for gateway to repond."""
         async with self._lock:
             self.send_command(protocol, command, device_address, device_id)
+            # self.send_command(command, device_address, device_id, protocol)
             self._event.clear()
             # await self._event.wait()
         return True

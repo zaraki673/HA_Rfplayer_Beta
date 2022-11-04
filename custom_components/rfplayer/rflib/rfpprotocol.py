@@ -50,6 +50,7 @@ class ProtocolBase(asyncio.Protocol):
         self.send_raw_packet("ZIA++HELLO")
         self.send_raw_packet("ZIA++RECEIVER + *")
         self.send_raw_packet("ZIA++FORMAT JSON")
+
         log.debug("initialized")
 
     def data_received(self, data: bytes) -> None:
@@ -161,16 +162,19 @@ class PacketHandling(ProtocolBase):
             if protocol == "EDISIOFRAME" :
                 self.send_raw_packet(f"ZIA++{protocol} {device_id}")
             else :
-                self.send_raw_packet(f"ZIA++{command} {protocol} ID {device_id}")
+# modif d'ordre d'envoie
+                self.send_raw_packet(f"ZIA++{command} ID {device_id} {protocol}")
 
         elif device_address is not None:
-            self.send_raw_packet(f"ZIA++{command} {protocol} {device_address}")
+# modif d'ordre d'envoie
+            self.send_raw_packet(f"ZIA++{command} {device_address} {protocol}")
 # modif pour raw sur edisioframe dans command Edisioframe + hexa
         elif protocol == "EDISIOFRAME":
             self.send_raw_packet(f"ZIA++{command}")
 #####
         else:
-            self.send_raw_packet(f"ZIA++{protocol} {command}")
+# modif d'ordre d'envoie
+            self.send_raw_packet(f"ZIA++{command} {protocol}")
 
 class CommandSerialization(PacketHandling):
     """Logic for ensuring asynchronous commands are sent in order."""

@@ -1,4 +1,8 @@
 # CHANGELOG
+## 16.0.1
+-Changement sur le protocol suite a bug sur le mode JAMMING.
+
+[@+DoM(Ô¿Ô) 🖖]
 
 ## 16.0.0
 

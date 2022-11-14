@@ -1,4 +1,10 @@
 # CHANGELOG
+
+## 16.0.2
+-Changement calcul retour pour sonde Température EDISIO
+
+[@+DoM(Ô¿Ô) 🖖]
+
 ## 16.0.1
 -Changement sur le protocol suite a bug sur le mode JAMMING.
 

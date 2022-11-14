@@ -155,7 +155,7 @@ def decode_packet(packet: str) -> list:
         data["state"] = message["infos"]["subTypeMeaning"]
         data["type"] = message["infos"]["subTypeMeaning"]
         if data["state"] in ["SET_TEMPERATURE"]:
-            data["command"] = message["infos"]["add0"]
+            data["command"] = int(message["infos"]["add0"]) /100
             data["unit"] = "°C"
         elif data["state"] in ["TOGGLE"]:
             data["command"] = message["infos"]["qualifier"]

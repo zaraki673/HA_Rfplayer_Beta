@@ -99,6 +99,8 @@ Les commandes peuvent être saisies directement avec les parties complétées:
 
 ![image](https://user-images.githubusercontent.com/97252459/199838930-68cf3308-dcf6-4fcd-897d-bb8f0b0def84.png)
 
+La description de protocole/commmande et addresse: voir pages 13,14 du rfplayer_api_v1.15.pdf
+
 et si besoin :
 ![image](https://user-images.githubusercontent.com/97252459/199839009-bad0ef35-ea41-4d52-9c56-d0fa4c85b5d2.png)
 

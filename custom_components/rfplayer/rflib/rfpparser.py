@@ -64,10 +64,25 @@ DTC_STATUS_LOOKUP = {
     # "99": "confort",
 }
 
+
+SBX_STATUS_LOOKUP = {
+    "0": "eco",     
+    "1": "moderato",   
+    "2": "medio",      
+    "3": "comfort",  
+    "4": "stop",   
+    "5": "outoffrost",
+    "6": "special",    
+    "7": "auto",
+    "8": "centralised",
+    "9": "outoffrost", # starbox f03: undocumented, like outoffrost + progressive heating ?
+}
+
 VALUE_TRANSLATION = cast(
     Dict[str, Callable[[str], str]],
     {
         "detector": lambda x: DTC_STATUS_LOOKUP.get(x, "unknown"),
+        "starbox": lambda x: SBX_STATUS_LOOKUP.get(x, "unknown"),
     },
 )
 
@@ -126,10 +141,22 @@ def decode_packet(packet: str) -> list:
 
     elif data["protocol"] in ["X2D"]:
         data["id"] = message["infos"]["id"]
-        if message["infos"]["subTypeMeaning"] == 'Detector/Sensor':
-          value = VALUE_TRANSLATION['detector'](message["infos"]["qualifier"]) 
+        if message["infos"]["subTypeMeaning"] == "Detector/Sensor":
+          value = VALUE_TRANSLATION["detector"](message["infos"]["qualifier"]) 
           data["command"] = value
           data["state"] = value
+        elif message["infos"]["subTypeMeaning"] == "STARBOX F03":
+          if message["infos"]["functionMeaning"] == "OPERATING MODE": 
+            value = VALUE_TRANSLATION["starbox"](message["infos"]["state"])
+            data["command"] = value                                             
+            data["state"] = value  
+          elif ( message["infos"]["functionMeaning"] == "OTHER FUNCTION" 
+                 and message["infos"]["state"] == "6" ):
+            data["command"] = "assoc:" + message["infos"]["area"]
+            data["state"] = "assoc:" + message["infos"]["area"]
+          else:
+            data["command"] = message["infos"]["functionMeaning"]
+            data["state"] = message["infos"]["stateMeaning"]
         else:
           data["command"] = message["infos"]["subTypeMeaning"]
           data["state"] = message["infos"]["qualifier"]

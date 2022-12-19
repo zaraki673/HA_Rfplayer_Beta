@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 16.0.3
+Add X2D/STARBOX F03 (CPL) messages parsing
+
+ [@+DoM(Ô¿Ô)jaroslawp 🖖]
+ 
 ## 16.0.2
 -Changement calcul retour pour sonde Température EDISIO
 

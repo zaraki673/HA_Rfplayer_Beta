@@ -5,8 +5,8 @@
   "issue_tracker": "https://github.com/Doubledom45/HA_Rfplayer_Beta/issues",
   "config_flow": true,
   "requirements": ["pyserial==3.5", "pyserial-asyncio==0.5"],
-  "codeowners": ["@Doubledom45", "@Aohzan", "@gce-electronics"],
+  "codeowners": ["@Doubledom45", "@jaroslawp", "@Aohzan", "@gce-electronics"],
   "dependencies": [],
   "iot_class": "assumed_state",
-  "version": "16.0.2"
+  "version": "16.0.3"
 }
